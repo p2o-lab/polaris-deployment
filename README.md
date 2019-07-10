@@ -1,2 +1,2 @@
 # polaris-deployment
-Different deployment setups for polaris
+Different deployment setups for polaris using docker-compose
