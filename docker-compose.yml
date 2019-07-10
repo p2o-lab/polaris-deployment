@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  polaris-backend:
+    image: p2olab/polaris-backend:latest
+    restart: always
+    ports:
+      - "3000:3000"
+  polaris-frontend:
+    image: p2olab/polaris-frontend:latest
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - polaris-backend
+      - mtp-converter
+  mtp-converter:
+    image: registry.plt.et.tu-dresden.de/mtp-converter:latest
+    restart: always
+    ports:
+      - "3031:3031"
