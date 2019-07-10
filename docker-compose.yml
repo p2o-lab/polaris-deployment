@@ -13,7 +13,6 @@ services:
       - "80:80"
     depends_on:
       - polaris-backend
-      - mtp-converter
   mtp-converter:
     image: registry.plt.et.tu-dresden.de/mtp-converter:latest
     restart: always
