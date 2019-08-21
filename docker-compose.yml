@@ -14,7 +14,7 @@ services:
     depends_on:
       - polaris-backend
   mtp-converter:
-    image: registry.plt.et.tu-dresden.de/mtp-converter:latest
+    image: p2olab/mtp-converter:latest
     restart: always
     ports:
       - "3031:3031"
