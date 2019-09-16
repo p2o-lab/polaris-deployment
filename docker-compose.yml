@@ -2,19 +2,24 @@ version: '3'
 
 services:
   polaris-backend:
-    image: p2olab/polaris-backend:latest
-    restart: always
+    image: p2olab/polaris-backend:1.9.0
     ports:
-      - "3000:3000"
+      - 3000:3000
+
   polaris-frontend:
-    image: p2olab/polaris-frontend:latest
-    restart: always
+    image: p2olab/polaris-frontend:1.9.0
     ports:
-      - "80:80"
+      - 80:80
     depends_on:
       - polaris-backend
+      - mtp-converter
+
   mtp-converter:
-    image: p2olab/mtp-converter:latest
-    restart: always
+    image: p2olab/mtp-converter:1.4.3
     ports:
-      - "3031:3031"
+      - 3031:3031
+
+  test-pea:
+    image: p2olab/test-pea:1.9.0
+    ports:
+      - 4334:4334
