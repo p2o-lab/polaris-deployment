@@ -2,12 +2,12 @@ version: '3'
 
 services:
   polaris-backend:
-    image: p2olab/polaris-backend:1.8.2
+    image: p2olab/polaris-backend:stable
     ports:
       - 3000:3000
 
   polaris-frontend:
-    image: p2olab/polaris-frontend:1.8.2
+    image: p2olab/polaris-frontend:2.0.1
     ports:
       - 80:80
     depends_on:
